@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7123985217A304EA0050E084 /* quote.html in Resources */ = {isa = PBXBuildFile; fileRef = 7123985117A304EA0050E084 /* quote.html */; };
+		7136DD381795B25900E2278A /* ListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7136DD371795B25900E2278A /* ListView.m */; };
+		71444AAF17A6BB0800312439 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71444AAE17A6BB0800312439 /* MediaPlayer.framework */; };
+		7184D089179D6E0E0019D354 /* WatchListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7184D088179D6E0E0019D354 /* WatchListView.m */; };
+		7184D08C179D6EBD0019D354 /* WatchListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7184D08B179D6EBD0019D354 /* WatchListViewController.m */; };
+		71C84A6117942F2400BB4A35 /* WebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C84A6017942F2400BB4A35 /* WebView.m */; };
+		71C84A641794330900BB4A35 /* DashboardWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C84A631794330900BB4A35 /* DashboardWebViewController.m */; };
+		71C84A6E1794975400BB4A35 /* RSSChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C84A6717944FFB00BB4A35 /* RSSChannel.m */; };
+		71C84A6F1794975900BB4A35 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C84A6917944FFB00BB4A35 /* ListViewController.m */; };
+		71C84A701794975D00BB4A35 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C84A6B17944FFB00BB4A35 /* WebViewController.m */; };
+		71C84A711794976300BB4A35 /* RSSItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C84A6D17944FFB00BB4A35 /* RSSItem.m */; };
+		71C88ACF179976490028FEE6 /* QuoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C88ACE179976490028FEE6 /* QuoteView.m */; };
+		71C88AD2179976B90028FEE6 /* QuoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C88AD1179976B90028FEE6 /* QuoteViewController.m */; };
+		71C88AD41799903A0028FEE6 /* chart.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 71C88AD31799903A0028FEE6 /* chart.jpeg */; };
+		71C88AD6179996A80028FEE6 /* AAPL Chart.webarchive in Resources */ = {isa = PBXBuildFile; fileRef = 71C88AD5179996A80028FEE6 /* AAPL Chart.webarchive */; };
 		71DAAF7A17903A7400A61A23 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71DAAF7917903A7400A61A23 /* UIKit.framework */; };
 		71DAAF7C17903A7400A61A23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71DAAF7B17903A7400A61A23 /* Foundation.framework */; };
 		71DAAF7E17903A7400A61A23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71DAAF7D17903A7400A61A23 /* CoreGraphics.framework */; };
@@ -16,9 +31,40 @@
 		71DAAF8C17903A7400A61A23 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 71DAAF8B17903A7400A61A23 /* Default.png */; };
 		71DAAF8E17903A7400A61A23 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71DAAF8D17903A7400A61A23 /* Default@2x.png */; };
 		71DAAF9017903A7400A61A23 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71DAAF8F17903A7400A61A23 /* Default-568h@2x.png */; };
+		71DAAF9817903AC300A61A23 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DAAF9717903AC300A61A23 /* MainViewController.m */; };
+		71DAAF9B17903CB000A61A23 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DAAF9A17903CB000A61A23 /* MainView.m */; };
+		71DAAF9E17907C3800A61A23 /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DAAF9D17907C3800A61A23 /* ChartView.m */; };
+		71DAAFA117908E9E00A61A23 /* ChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DAAFA017908E9E00A61A23 /* ChartViewController.m */; };
+		71EF9BC417970A9300398666 /* RayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EF9BC317970A9300398666 /* RayViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7123985117A304EA0050E084 /* quote.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = quote.html; sourceTree = "<group>"; };
+		7136DD361795B25900E2278A /* ListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListView.h; sourceTree = "<group>"; };
+		7136DD371795B25900E2278A /* ListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListView.m; sourceTree = "<group>"; };
+		71444AAE17A6BB0800312439 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		7184D087179D6E0E0019D354 /* WatchListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WatchListView.h; path = ../WatchListView.h; sourceTree = "<group>"; };
+		7184D088179D6E0E0019D354 /* WatchListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WatchListView.m; path = ../WatchListView.m; sourceTree = "<group>"; };
+		7184D08A179D6EBD0019D354 /* WatchListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchListViewController.h; sourceTree = "<group>"; };
+		7184D08B179D6EBD0019D354 /* WatchListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchListViewController.m; sourceTree = "<group>"; };
+		71C84A5F17942F2400BB4A35 /* WebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebView.h; path = ../WebView.h; sourceTree = "<group>"; };
+		71C84A6017942F2400BB4A35 /* WebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebView.m; path = ../WebView.m; sourceTree = "<group>"; };
+		71C84A621794330900BB4A35 /* DashboardWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardWebViewController.h; sourceTree = "<group>"; };
+		71C84A631794330900BB4A35 /* DashboardWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardWebViewController.m; sourceTree = "<group>"; };
+		71C84A6617944FFB00BB4A35 /* RSSChannel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSSChannel.h; sourceTree = "<group>"; };
+		71C84A6717944FFB00BB4A35 /* RSSChannel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSSChannel.m; sourceTree = "<group>"; };
+		71C84A6817944FFB00BB4A35 /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		71C84A6917944FFB00BB4A35 /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		71C84A6A17944FFB00BB4A35 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		71C84A6B17944FFB00BB4A35 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		71C84A6C17944FFB00BB4A35 /* RSSItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSSItem.h; sourceTree = "<group>"; };
+		71C84A6D17944FFB00BB4A35 /* RSSItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSSItem.m; sourceTree = "<group>"; };
+		71C88ACD179976490028FEE6 /* QuoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuoteView.h; path = ../QuoteView.h; sourceTree = "<group>"; };
+		71C88ACE179976490028FEE6 /* QuoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuoteView.m; path = ../QuoteView.m; sourceTree = "<group>"; };
+		71C88AD0179976B90028FEE6 /* QuoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteViewController.h; sourceTree = "<group>"; };
+		71C88AD1179976B90028FEE6 /* QuoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteViewController.m; sourceTree = "<group>"; };
+		71C88AD31799903A0028FEE6 /* chart.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chart.jpeg; sourceTree = "<group>"; };
+		71C88AD5179996A80028FEE6 /* AAPL Chart.webarchive */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "AAPL Chart.webarchive"; sourceTree = "<group>"; };
 		71DAAF7617903A7400A61A23 /* Dashboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dashboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71DAAF7917903A7400A61A23 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		71DAAF7B17903A7400A61A23 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -32,6 +78,16 @@
 		71DAAF8B17903A7400A61A23 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		71DAAF8D17903A7400A61A23 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		71DAAF8F17903A7400A61A23 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		71DAAF9617903AC300A61A23 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ../MainViewController.h; sourceTree = "<group>"; };
+		71DAAF9717903AC300A61A23 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = ../MainViewController.m; sourceTree = "<group>"; };
+		71DAAF9917903CB000A61A23 /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainView.h; path = ../MainView.h; sourceTree = "<group>"; };
+		71DAAF9A17903CB000A61A23 /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainView.m; path = ../MainView.m; sourceTree = "<group>"; };
+		71DAAF9C17907C3800A61A23 /* ChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChartView.h; path = ../ChartView.h; sourceTree = "<group>"; };
+		71DAAF9D17907C3800A61A23 /* ChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChartView.m; path = ../ChartView.m; sourceTree = "<group>"; };
+		71DAAF9F17908E9E00A61A23 /* ChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartViewController.h; sourceTree = "<group>"; };
+		71DAAFA017908E9E00A61A23 /* ChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartViewController.m; sourceTree = "<group>"; };
+		71EF9BC217970A9300398666 /* RayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RayViewController.h; path = ../RayViewController.h; sourceTree = "<group>"; };
+		71EF9BC317970A9300398666 /* RayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RayViewController.m; path = ../RayViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71444AAF17A6BB0800312439 /* MediaPlayer.framework in Frameworks */,
 				71DAAF7A17903A7400A61A23 /* UIKit.framework in Frameworks */,
 				71DAAF7C17903A7400A61A23 /* Foundation.framework in Frameworks */,
 				71DAAF7E17903A7400A61A23 /* CoreGraphics.framework in Frameworks */,
@@ -48,10 +105,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71444AAB17A6AEF800312439 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Video;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		71AABBFE17A1C31700837253 /* Old ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7184D08A179D6EBD0019D354 /* WatchListViewController.h */,
+				7184D08B179D6EBD0019D354 /* WatchListViewController.m */,
+				71C84A621794330900BB4A35 /* DashboardWebViewController.h */,
+				71C84A631794330900BB4A35 /* DashboardWebViewController.m */,
+				71DAAF9F17908E9E00A61A23 /* ChartViewController.h */,
+				71DAAFA017908E9E00A61A23 /* ChartViewController.m */,
+				71C88AD0179976B90028FEE6 /* QuoteViewController.h */,
+				71C88AD1179976B90028FEE6 /* QuoteViewController.m */,
+			);
+			name = "Old ViewControllers";
+			sourceTree = "<group>";
+		};
+		71C84A6517944FCB00BB4A35 /* RSS Feed */ = {
+			isa = PBXGroup;
+			children = (
+				71C84A6617944FFB00BB4A35 /* RSSChannel.h */,
+				71C84A6717944FFB00BB4A35 /* RSSChannel.m */,
+				71C84A6817944FFB00BB4A35 /* ListViewController.h */,
+				71C84A6917944FFB00BB4A35 /* ListViewController.m */,
+				7136DD361795B25900E2278A /* ListView.h */,
+				7136DD371795B25900E2278A /* ListView.m */,
+				71C84A6A17944FFB00BB4A35 /* WebViewController.h */,
+				71C84A6B17944FFB00BB4A35 /* WebViewController.m */,
+				71C84A6C17944FFB00BB4A35 /* RSSItem.h */,
+				71C84A6D17944FFB00BB4A35 /* RSSItem.m */,
+			);
+			name = "RSS Feed";
+			path = ..;
+			sourceTree = "<group>";
+		};
 		71DAAF6D17903A7400A61A23 = {
 			isa = PBXGroup;
 			children = (
 				71DAAF7F17903A7400A61A23 /* Dashboard */,
+				71AABBFE17A1C31700837253 /* Old ViewControllers */,
 				71DAAF7817903A7400A61A23 /* Frameworks */,
 				71DAAF7717903A7400A61A23 /* Products */,
 			);
@@ -68,6 +167,7 @@
 		71DAAF7817903A7400A61A23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				71444AAE17A6BB0800312439 /* MediaPlayer.framework */,
 				71DAAF7917903A7400A61A23 /* UIKit.framework */,
 				71DAAF7B17903A7400A61A23 /* Foundation.framework */,
 				71DAAF7D17903A7400A61A23 /* CoreGraphics.framework */,
@@ -80,6 +180,22 @@
 			children = (
 				71DAAF8817903A7400A61A23 /* AppDelegate.h */,
 				71DAAF8917903A7400A61A23 /* AppDelegate.m */,
+				71DAAF9917903CB000A61A23 /* MainView.h */,
+				71DAAF9A17903CB000A61A23 /* MainView.m */,
+				71DAAF9617903AC300A61A23 /* MainViewController.h */,
+				71DAAF9717903AC300A61A23 /* MainViewController.m */,
+				71EF9BC217970A9300398666 /* RayViewController.h */,
+				71EF9BC317970A9300398666 /* RayViewController.m */,
+				71C88ACD179976490028FEE6 /* QuoteView.h */,
+				71C88ACE179976490028FEE6 /* QuoteView.m */,
+				71DAAF9C17907C3800A61A23 /* ChartView.h */,
+				71DAAF9D17907C3800A61A23 /* ChartView.m */,
+				71C84A5F17942F2400BB4A35 /* WebView.h */,
+				71C84A6017942F2400BB4A35 /* WebView.m */,
+				7184D087179D6E0E0019D354 /* WatchListView.h */,
+				7184D088179D6E0E0019D354 /* WatchListView.m */,
+				71444AAB17A6AEF800312439 /* Video */,
+				71C84A6517944FCB00BB4A35 /* RSS Feed */,
 				71DAAF8017903A7400A61A23 /* Supporting Files */,
 			);
 			path = Dashboard;
@@ -88,6 +204,9 @@
 		71DAAF8017903A7400A61A23 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7123985117A304EA0050E084 /* quote.html */,
+				71C88AD5179996A80028FEE6 /* AAPL Chart.webarchive */,
+				71C88AD31799903A0028FEE6 /* chart.jpeg */,
 				71DAAF8117903A7400A61A23 /* Dashboard-Info.plist */,
 				71DAAF8217903A7400A61A23 /* InfoPlist.strings */,
 				71DAAF8517903A7400A61A23 /* main.m */,
@@ -154,6 +273,9 @@
 				71DAAF8C17903A7400A61A23 /* Default.png in Resources */,
 				71DAAF8E17903A7400A61A23 /* Default@2x.png in Resources */,
 				71DAAF9017903A7400A61A23 /* Default-568h@2x.png in Resources */,
+				71C88AD41799903A0028FEE6 /* chart.jpeg in Resources */,
+				71C88AD6179996A80028FEE6 /* AAPL Chart.webarchive in Resources */,
+				7123985217A304EA0050E084 /* quote.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +288,22 @@
 			files = (
 				71DAAF8617903A7400A61A23 /* main.m in Sources */,
 				71DAAF8A17903A7400A61A23 /* AppDelegate.m in Sources */,
+				71DAAF9817903AC300A61A23 /* MainViewController.m in Sources */,
+				71DAAF9B17903CB000A61A23 /* MainView.m in Sources */,
+				71DAAF9E17907C3800A61A23 /* ChartView.m in Sources */,
+				71DAAFA117908E9E00A61A23 /* ChartViewController.m in Sources */,
+				71C84A6117942F2400BB4A35 /* WebView.m in Sources */,
+				71C84A641794330900BB4A35 /* DashboardWebViewController.m in Sources */,
+				71C84A6E1794975400BB4A35 /* RSSChannel.m in Sources */,
+				71C84A6F1794975900BB4A35 /* ListViewController.m in Sources */,
+				71C84A701794975D00BB4A35 /* WebViewController.m in Sources */,
+				71C84A711794976300BB4A35 /* RSSItem.m in Sources */,
+				7136DD381795B25900E2278A /* ListView.m in Sources */,
+				71EF9BC417970A9300398666 /* RayViewController.m in Sources */,
+				71C88ACF179976490028FEE6 /* QuoteView.m in Sources */,
+				71C88AD2179976B90028FEE6 /* QuoteViewController.m in Sources */,
+				7184D089179D6E0E0019D354 /* WatchListView.m in Sources */,
+				7184D08C179D6EBD0019D354 /* WatchListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +420,7 @@
 				71DAAF9517903A7400A61A23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
