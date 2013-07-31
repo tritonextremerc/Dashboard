@@ -54,7 +54,6 @@
         [self setUserInteractionEnabled:YES];
         [self addSubview:urlBar];
         [self addSubview:bottomBar];
-        [self setUserInteractionEnabled:YES];
         [self setMultipleTouchEnabled:YES];
         
         

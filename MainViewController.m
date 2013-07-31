@@ -18,12 +18,14 @@
 @synthesize watchListView;
 @synthesize newsView;
 @synthesize videoPlayer;
+@synthesize twitterView;
 @synthesize chartViewControllerArray;
 @synthesize quoteViewControllerArray;
 @synthesize webViewControllerArray;
 @synthesize watchListViewControllerArray;
 @synthesize newsViewControllerArray;
 @synthesize videoPlayerControllerArray;
+@synthesize twitterViewControllerArray;
 
 
 - (void)loadView
@@ -53,8 +55,11 @@
     // Create newsViewController Array
     newsViewControllerArray = [[NSMutableArray alloc] init];
     
-    // Creat videoPlayerController Array
+    // Create videoPlayerController Array
     videoPlayerControllerArray = [[NSMutableArray alloc] init];
+    
+    // Create twitterViewController Array
+    twitterViewControllerArray = [[NSMutableArray alloc] init];
     
     
     // Create Top Toolbar
@@ -154,8 +159,16 @@
     videoButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [videoButton addTarget:self action:@selector(addVideo:) forControlEvents:UIControlEventTouchDown];
     [videoButton setTitle:@"Video" forState:UIControlStateNormal];
-    videoButton.frame = CGRectMake(920, 10, 100, 30);
+    videoButton.frame = CGRectMake(920, 10, 50, 30);
     [bToolBar addSubview:videoButton];
+    [self.view addSubview:bToolBar];
+    
+    // Add Twitter button and Add to Bottom Toolbar
+    twitterButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [twitterButton addTarget:self action:@selector(addTwitter:) forControlEvents:UIControlEventTouchDown];
+    [twitterButton setTitle:@"Twitter" forState:UIControlStateNormal];
+    twitterButton.frame = CGRectMake(970, 10, 50, 30);
+    [bToolBar addSubview:twitterButton];
     [self.view addSubview:bToolBar];
     
 
@@ -170,6 +183,11 @@
     
 
     
+}
+
+- (void)didReceiveMemoryWarning
+{
+    NSLog(@"Memory Warning");
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
@@ -208,7 +226,7 @@
     [self addChildViewController:[chartViewControllerArray objectAtIndex:i]];
     [[chartViewControllerArray objectAtIndex:i] didMoveToParentViewController:self];
     
-    [self printSubViewInView];
+    
     
     i++;
     
@@ -232,6 +250,20 @@
     
 
 
+}
+
+- (void)addTwitter:(id)sender
+{
+    int i = 0;
+    twitterView = [[TwitterViewController alloc] initWithStyle:UITableViewStylePlain];
+    [twitterViewControllerArray insertObject:twitterView atIndex:i];
+    
+    [self.view addSubview:twitterView.view];
+    [self addChildViewController:[twitterViewControllerArray objectAtIndex:i]];
+    [[twitterViewControllerArray objectAtIndex:i] didMoveToParentViewController:self];
+    
+    i++;
+    
 }
 
 - (void)addQuote:(id)sender
@@ -300,10 +332,6 @@
     
     i++;
 
-//    WatchListViewController *watchList = [[WatchListViewController alloc] initWithStyle:UITableViewStylePlain];
-//    [self.view addSubview:watchList.view];
-//    [self addChildViewController:watchList];
-//    [watchList didMoveToParentViewController:self];
 }
 
 
@@ -342,6 +370,11 @@
         [newsViewSubView editNewsView];
     }
     
+    for (TwitterViewController *twitterSubView in twitterViewControllerArray) {
+        [twitterSubView addGestureRecognizers];
+        [twitterSubView editTwitterView];
+    }
+    
     
     if ([editButton isTouchInside]) {
         
@@ -358,6 +391,7 @@
     [webButton setEnabled:NO];
     [watchListButton setEnabled:NO];
     [videoButton setEnabled:NO];
+    [twitterButton setEnabled:NO];
     
 }
 
@@ -393,6 +427,11 @@
         [newsViewSubView removeGestureRecognizers];
         [newsViewSubView activateNewsView];
     }
+    
+    for (TwitterViewController *twitterSubView in twitterViewControllerArray) {
+        [twitterSubView removeGestureRecognizers];
+        [twitterSubView activateTwitterView];
+    }
 
 
         
@@ -412,6 +451,7 @@
     [webButton setEnabled:YES];
     [watchListButton setEnabled:YES];
     [videoButton setEnabled:YES];
+    [twitterButton setEnabled:YES];
     
     NSLog(@"Done Pressed");
     

@@ -15,7 +15,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        tableView = [[UITableView alloc] initWithFrame:frame];
+        
         
         // Top toolbar
         UIToolbar *topBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 300, 40)];

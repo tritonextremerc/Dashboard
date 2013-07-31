@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ListView : UITableView
-{
-    UITableView *tableView;
+
+
     
-}
 
 @end

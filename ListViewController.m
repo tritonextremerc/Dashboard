@@ -41,25 +41,6 @@
         
         NSLog(@"Initialized");
         
-//        panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panPress:)];
-//        [panRecognizer setDelegate:self];
-//        [self.view addGestureRecognizer:panRecognizer];
-//        
-//        
-//        
-//        longPressRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
-//        [longPressRecognizer setDelegate:self];
-//        [self.view addGestureRecognizer:longPressRecognizer];
-//        
-//        pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchPress:)];
-//        [pinchRecognizer setDelegate:self];
-//        [self.view addGestureRecognizer:pinchRecognizer];
-//        
-//        mCurrentScale = 0;
-//        mLastScale = 0;
-        
-        
-
     }
     
     return self;
@@ -79,13 +60,6 @@
     [pinchRecognizer setDelegate:self];
     [self.view addGestureRecognizer:pinchRecognizer];
     
-    //    tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
-    //    [tapRecognizer setNumberOfTapsRequired:2];
-    //    [tapRecognizer setDelegate:self];
-    //    [self.view addGestureRecognizer:tapRecognizer];
-    
-    mCurrentScale = 0;
-    mLastScale = 0;
     
 }
 
@@ -133,6 +107,7 @@
     }
     RSSItem *item = [[channel items] objectAtIndex:[indexPath row]];
     [[cell textLabel] setText:[item title]];
+    cell.imageView.image = [UIImage imageNamed:@"RSSLogo.jpg"];
     [[cell textLabel] setFont:[UIFont systemFontOfSize:14.0]];
     
     
@@ -223,7 +198,7 @@
     popover = [[UIPopoverController alloc] initWithContentViewController:webViewController];
     [popover setDelegate:self];
     popover.popoverContentSize = CGSizeMake(600, 600);
-    [popover presentPopoverFromRect:CGRectMake(600, 40, 0, 0) inView:self.parentViewController.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    [popover presentPopoverFromRect:CGRectMake(0, 0, 600, 600) inView:self.parentViewController.view permittedArrowDirections:UIPopoverArrowDirectionLeft | UIPopoverArrowDirectionRight animated:YES];
     
     
     // Grab the selected item
@@ -299,7 +274,7 @@
         CGPoint translation = [pr locationInView:self.view];
         
         // Padding to place finger in the center of the view
-        CGPoint padding = CGPointMake(140, 140);
+        CGPoint padding = CGPointMake(140, 300);
         
         translation.x -= padding.x;
         translation.y -= padding.y;
@@ -335,7 +310,7 @@
         CGFloat currentScale = [[[ppr view].layer valueForKeyPath:@"transform.scale"] floatValue];
         
         // Constants to adjust the max/min values of zoom
-        const CGFloat kMaxScale = 1.0;
+        const CGFloat kMaxScale = 1.5;
         const CGFloat kMinScale = 0.75;
         
         CGFloat newScale = 1 -  (mLastScale - [ppr scale]);

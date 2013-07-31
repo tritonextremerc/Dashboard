@@ -16,7 +16,7 @@
     if (self) {
         // Initialization code
         webUrl = @"http://www.tdameritrade.com";
-        webView = [[UIWebView alloc] initWithFrame:frame];
+        
         
         // Top toolbar
         UIToolbar *urlBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 300, 40)];

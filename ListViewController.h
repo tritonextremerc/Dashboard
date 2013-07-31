@@ -20,7 +20,7 @@
     NSMutableData *xmlData;
     RSSChannel *channel;
     ListView *listView;
-    WebViewController *webViewController;
+    //WebViewController *webViewController;
     UIPopoverController *popover;
     UILongPressGestureRecognizer *longPressRecognizer;
     UIPanGestureRecognizer *panRecognizer;

@@ -7,7 +7,27 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+#import <Accounts/Accounts.h>
+#import <Social/Social.h>
+#import "TwitterView.h"
 
-@interface TwitterViewController : UIViewController
+@interface TwitterViewController : UITableViewController<UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
+{
+    //UIPopoverController *popover;
+    UILongPressGestureRecognizer *longPressRecognizer;
+    UIPanGestureRecognizer *panRecognizer;
+    UIPinchGestureRecognizer *pinchRecognizer;
+    
+    CGFloat mCurrentScale;
+    CGFloat mLastScale;
+}
+
+@property (strong, nonatomic) NSArray *dataSource;
+
+- (void)addGestureRecognizers;
+- (void)removeGestureRecognizers;
+- (void)editTwitterView;
+- (void)activateTwitterView;
 
 @end

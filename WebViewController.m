@@ -15,7 +15,7 @@
 - (void)loadView
 {
     // Create an instance of UIWebView as large as the screen
-    CGRect screenFrame = CGRectMake(0, 40, 800, 600);
+    CGRect screenFrame = CGRectMake(0, 0, 600, 600);
     UIWebView *wv = [[UIWebView alloc] initWithFrame:screenFrame];
     
     // Tell web view to scale web content to fit within bounds of webview

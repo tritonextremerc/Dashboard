@@ -35,6 +35,12 @@
 		71DAAF9B17903CB000A61A23 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DAAF9A17903CB000A61A23 /* MainView.m */; };
 		71DAAF9E17907C3800A61A23 /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DAAF9D17907C3800A61A23 /* ChartView.m */; };
 		71DAAFA117908E9E00A61A23 /* ChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DAAFA017908E9E00A61A23 /* ChartViewController.m */; };
+		71EAE07017A9640F0014B570 /* TwitterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EAE06F17A9640F0014B570 /* TwitterView.m */; };
+		71EAE07317A964950014B570 /* TwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EAE07217A964950014B570 /* TwitterViewController.m */; };
+		71EAE07517A9675E0014B570 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EAE07417A9675E0014B570 /* Accounts.framework */; };
+		71EAE07717A967730014B570 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EAE07617A967730014B570 /* Social.framework */; };
+		71EAE07917A981F60014B570 /* twitterLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71EAE07817A981F60014B570 /* twitterLogo.jpg */; };
+		71EAE07B17A99FDD0014B570 /* RSSLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71EAE07A17A99FDD0014B570 /* RSSLogo.jpg */; };
 		71EF9BC417970A9300398666 /* RayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EF9BC317970A9300398666 /* RayViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +92,14 @@
 		71DAAF9D17907C3800A61A23 /* ChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChartView.m; path = ../ChartView.m; sourceTree = "<group>"; };
 		71DAAF9F17908E9E00A61A23 /* ChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartViewController.h; sourceTree = "<group>"; };
 		71DAAFA017908E9E00A61A23 /* ChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartViewController.m; sourceTree = "<group>"; };
+		71EAE06E17A9640F0014B570 /* TwitterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterView.h; sourceTree = "<group>"; };
+		71EAE06F17A9640F0014B570 /* TwitterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterView.m; sourceTree = "<group>"; };
+		71EAE07117A964950014B570 /* TwitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterViewController.h; sourceTree = "<group>"; };
+		71EAE07217A964950014B570 /* TwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterViewController.m; sourceTree = "<group>"; };
+		71EAE07417A9675E0014B570 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		71EAE07617A967730014B570 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		71EAE07817A981F60014B570 /* twitterLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = twitterLogo.jpg; sourceTree = SOURCE_ROOT; };
+		71EAE07A17A99FDD0014B570 /* RSSLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RSSLogo.jpg; sourceTree = SOURCE_ROOT; };
 		71EF9BC217970A9300398666 /* RayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RayViewController.h; path = ../RayViewController.h; sourceTree = "<group>"; };
 		71EF9BC317970A9300398666 /* RayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RayViewController.m; path = ../RayViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +109,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71EAE07717A967730014B570 /* Social.framework in Frameworks */,
+				71EAE07517A9675E0014B570 /* Accounts.framework in Frameworks */,
 				71444AAF17A6BB0800312439 /* MediaPlayer.framework in Frameworks */,
 				71DAAF7A17903A7400A61A23 /* UIKit.framework in Frameworks */,
 				71DAAF7C17903A7400A61A23 /* Foundation.framework in Frameworks */,
@@ -167,6 +183,8 @@
 		71DAAF7817903A7400A61A23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				71EAE07617A967730014B570 /* Social.framework */,
+				71EAE07417A9675E0014B570 /* Accounts.framework */,
 				71444AAE17A6BB0800312439 /* MediaPlayer.framework */,
 				71DAAF7917903A7400A61A23 /* UIKit.framework */,
 				71DAAF7B17903A7400A61A23 /* Foundation.framework */,
@@ -194,6 +212,7 @@
 				71C84A6017942F2400BB4A35 /* WebView.m */,
 				7184D087179D6E0E0019D354 /* WatchListView.h */,
 				7184D088179D6E0E0019D354 /* WatchListView.m */,
+				71EAE06D17A963C70014B570 /* Twitter View */,
 				71444AAB17A6AEF800312439 /* Video */,
 				71C84A6517944FCB00BB4A35 /* RSS Feed */,
 				71DAAF8017903A7400A61A23 /* Supporting Files */,
@@ -204,6 +223,8 @@
 		71DAAF8017903A7400A61A23 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				71EAE07817A981F60014B570 /* twitterLogo.jpg */,
+				71EAE07A17A99FDD0014B570 /* RSSLogo.jpg */,
 				7123985117A304EA0050E084 /* quote.html */,
 				71C88AD5179996A80028FEE6 /* AAPL Chart.webarchive */,
 				71C88AD31799903A0028FEE6 /* chart.jpeg */,
@@ -216,6 +237,18 @@
 				71DAAF8F17903A7400A61A23 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		71EAE06D17A963C70014B570 /* Twitter View */ = {
+			isa = PBXGroup;
+			children = (
+				71EAE06E17A9640F0014B570 /* TwitterView.h */,
+				71EAE06F17A9640F0014B570 /* TwitterView.m */,
+				71EAE07117A964950014B570 /* TwitterViewController.h */,
+				71EAE07217A964950014B570 /* TwitterViewController.m */,
+			);
+			name = "Twitter View";
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +309,8 @@
 				71C88AD41799903A0028FEE6 /* chart.jpeg in Resources */,
 				71C88AD6179996A80028FEE6 /* AAPL Chart.webarchive in Resources */,
 				7123985217A304EA0050E084 /* quote.html in Resources */,
+				71EAE07917A981F60014B570 /* twitterLogo.jpg in Resources */,
+				71EAE07B17A99FDD0014B570 /* RSSLogo.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +339,8 @@
 				71C88AD2179976B90028FEE6 /* QuoteViewController.m in Sources */,
 				7184D089179D6E0E0019D354 /* WatchListView.m in Sources */,
 				7184D08C179D6EBD0019D354 /* WatchListViewController.m in Sources */,
+				71EAE07017A9640F0014B570 /* TwitterView.m in Sources */,
+				71EAE07317A964950014B570 /* TwitterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

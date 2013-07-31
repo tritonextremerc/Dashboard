@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TwitterView : UIView
+@interface TwitterView : UITableView
 
 @end

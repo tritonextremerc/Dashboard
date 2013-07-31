@@ -11,7 +11,7 @@
 @interface WebView : UIWebView<UIWebViewDelegate, UITextFieldDelegate>
 {
     
-    UIWebView *webView;
+    
     NSString *webUrl;
     UITextField *urlLookup;
     

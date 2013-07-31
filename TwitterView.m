@@ -15,6 +15,19 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        // Top toolbar
+        UIToolbar *topBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 600, 40)];
+        [topBar setTintColor:[UIColor blackColor]];
+        
+        // Bottom toolbar
+        //        UIToolbar *bottomBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 600, 300, 20)];
+        //        [bottomBar setTintColor:[UIColor blackColor]];
+        
+        [self addSubview:topBar];
+        //[self addSubview:bottomBar];
+        [self setUserInteractionEnabled:YES];
+        [self setMultipleTouchEnabled:YES];
+
     }
     return self;
 }
