@@ -1,122 +1,98 @@
 //
-//  TwitterViewController.m
+//  ViewListController.m
 //  Dashboard
 //
-//  Created by Ray  on 7/31/13.
+//  Created by Ray  on 8/1/13.
 //  Copyright (c) 2013 ray. All rights reserved.
 //
 
-#import "TwitterViewController.h"
+#import "ViewListController.h"
+#include "MainViewController.h"
 
-@interface TwitterViewController ()
 
-@end
+@implementation ViewListController
 
-@implementation TwitterViewController
+@synthesize delegate;
+@synthesize viewListItems;
+@synthesize viewListImages;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
-    if (self){
-        [self setTableView:[[TwitterView alloc] initWithFrame:CGRectMake(320, 50, 600, 600)]];
-        [[self tableView] setSeparatorStyle:UITableViewCellSeparatorStyleSingleLineEtched];
-        [self getTimeLine];
+    if (self) {
+        [self setTableView:[[ViewList alloc] initWithFrame:CGRectMake(0, 300, 200, 310) style:UITableViewStylePlain]];
+        
+        viewListItems = [[NSMutableArray alloc] initWithObjects:@"Chart",@"Quote", @"News", @"Web", @"Watch List", @"Video", @"Twitter", nil];
+        viewListImages = [[NSMutableArray alloc] init];
+        [viewListImages addObject:[UIImage imageNamed:@"Stock Chart.jpg"]];
+        [viewListImages addObject:[UIImage imageNamed:@"Stock Quote.jpg"]];
+        [viewListImages addObject:[UIImage imageNamed:@"RSSLogo.jpg"]];
+        [viewListImages addObject:[UIImage imageNamed:@"Web.jpg"]];
+        [viewListImages addObject:[UIImage imageNamed:@"WatchList.jpg"]];
+        [viewListImages addObject:[UIImage imageNamed:@"Video.jpg"]];
+        [viewListImages addObject:[UIImage imageNamed:@"twitterLogo.jpg"]];
         
         
-        NSLog(@"Initialized");
         
     }
     
     return self;
 }
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    
-}
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-- (void)getTimeLine
-{
-    ACAccountStore *account = [[ACAccountStore alloc] init];
-    ACAccountType *accountType = [account accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
-    [account requestAccessToAccountsWithType:accountType options:nil completion:^(BOOL granted, NSError *error) {
-        if (granted == YES){
-            NSArray *arrayOfAccounts = [account accountsWithAccountType:accountType];
-            if ([arrayOfAccounts count] > 0) {
-                ACAccount *twitterAccount = [arrayOfAccounts lastObject];
-                
-                NSURL *requestURL = [NSURL URLWithString:@"http://api.twitter.com/1/statuses/home_timeline.json"];
-                
-                NSMutableDictionary *parameters = [[NSMutableDictionary alloc] init];
-                [parameters setObject:@"50" forKey:@"count"];
-                [parameters setObject:@"1" forKey:@"include_entities"];
-                
-                SLRequest *postRequest = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodGET URL:requestURL parameters:parameters];
-                
-                postRequest.account = twitterAccount;
-                
-                [postRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
-                    self.dataSource = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableLeaves error:&error];
-                    if (self.dataSource.count != 0){
-                        dispatch_async(dispatch_get_main_queue(), ^{
-                            [self.tableView reloadData];
-                        });
-                    }
-                }];
-            }
-        } else{
-            // Handle failure to get account access
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Accessing Account" message:@"Could Not Access your Twitter Account" delegate:self cancelButtonTitle:@"Retry" otherButtonTitles:@"Cancel", nil];
-            [alertView show];
-            [self getTimeLine];
-        }
-    }];
-}
-
-#pragma mark -
-#pragma mark UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _dataSource.count;
+    return 7;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     
-    TwitterViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     
     if (cell == nil) {
-        cell = [[TwitterViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    NSDictionary *tweet = _dataSource[[indexPath row]];
-    [[cell textLabel] setFont:[UIFont systemFontOfSize:12.0]];
-    cell.textLabel.text = tweet[@"text"];
-    cell.imageView.image = [UIImage imageNamed:@"twitterLogo.jpg"];
-    cell.backgroundColor = [UIColor lightGrayColor];
+    cell.textLabel.text = [viewListItems objectAtIndex:[indexPath row]];
+    cell.imageView.image = [viewListImages objectAtIndex:[indexPath row]];
     
+        
     
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 50.0;
-}
-
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
+    switch ([indexPath row]) {
+        case 0:
+            [self.delegate addChart:self];
+            break;
+        case 1:
+            [self.delegate addQuote:self];
+            break;
+        case 2:
+            [self.delegate addNews:self];
+            break;
+        case 3:
+            [self.delegate addWeb:self];
+            break;
+        case 4:
+            [self.delegate addWatchList:self];
+            break;
+        case 5:
+            [self.delegate addVideo:self];
+            break;
+        case 6:
+            [self.delegate addTwitter:self];
+            break;
+            
+        default:
+            break;
+    }
 }
 
 - (void)addGestureRecognizers
@@ -145,22 +121,23 @@
     
 }
 
-- (void)editTwitterView
+- (void)editViewList
 {
     
-    [self.view setMultipleTouchEnabled:NO];
+    [self.tableView setMultipleTouchEnabled:NO];
     [self.tableView setScrollEnabled:NO];
     [self.tableView setAllowsSelection:NO];
     
     
+    
 }
 
-- (void)activateTwitterView
+- (void)activateViewList
 {
-    [self.view setUserInteractionEnabled:YES];
-    [self.view setMultipleTouchEnabled:YES];
-    [self.tableView setScrollEnabled:YES];
+    [self.tableView setUserInteractionEnabled:YES];
+    [self.tableView setMultipleTouchEnabled:YES];
     [self.tableView setAllowsSelection:YES];
+    [self.tableView setScrollEnabled:YES];
     
 }
 
@@ -217,7 +194,7 @@
         CGPoint translation = [pr locationInView:self.view];
         
         // Padding to place finger in the center of the view
-        CGPoint padding = CGPointMake(280, 280);
+        CGPoint padding = CGPointMake(100, 150);
         
         translation.x -= padding.x;
         translation.y -= padding.y;
@@ -275,7 +252,6 @@
     [self.view removeFromSuperview];
     [self removeFromParentViewController];
 }
-
 
 
 

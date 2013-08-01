@@ -12,6 +12,7 @@
 
 @implementation MainViewController
 
+@synthesize viewList;
 @synthesize chartView;
 @synthesize quoteView;
 @synthesize webView;
@@ -26,6 +27,7 @@
 @synthesize newsViewControllerArray;
 @synthesize videoPlayerControllerArray;
 @synthesize twitterViewControllerArray;
+@synthesize viewListControllerArray;
 
 
 - (void)loadView
@@ -60,6 +62,9 @@
     
     // Create twitterViewController Array
     twitterViewControllerArray = [[NSMutableArray alloc] init];
+    
+    // Create viewListController Array
+    viewListControllerArray = [[NSMutableArray alloc] init];
     
     
     // Create Top Toolbar
@@ -114,75 +119,71 @@
     UIToolbar *bToolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 700, 1024, 50)];
     [bToolBar setTintColor:[UIColor blackColor]];
     
-    
-    // Add Chart View button and Add to Bottom Toolbar
-    chartButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [chartButton addTarget:self action:@selector(addChart:) forControlEvents:UIControlEventTouchDown];
-    [chartButton setTitle:@"Chart" forState:UIControlStateNormal];
-    chartButton.frame = CGRectMake(5, 10, 100, 30);
-    [bToolBar addSubview:chartButton];
+    // Add Add View Button and attach to toolbar
+    addViewButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [addViewButton addTarget:self action:@selector(addView:) forControlEvents:UIControlEventTouchDown];
+    [addViewButton setTitle:@"Add View" forState:UIControlStateNormal];
+    addViewButton.frame = CGRectMake(5, 10, 100, 30);
+    [bToolBar addSubview:addViewButton];
     [self.view addSubview:bToolBar];
     
-    // Add News View Button and Add to Bottom Toolbar
-    newsButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [newsButton addTarget:self action:@selector(addNews:) forControlEvents:UIControlEventTouchDown];
-    [newsButton setTitle:@"News" forState:UIControlStateNormal];
-    newsButton.frame = CGRectMake(180, 10, 100, 30);
-    [bToolBar addSubview:newsButton];
-    [self.view addSubview:bToolBar];
-    
-    // Add Quote View button and Add to Bottom Toolbar
-    quoteButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [quoteButton addTarget:self action:@selector(addQuote:) forControlEvents:UIControlEventTouchDown];
-    [quoteButton setTitle:@"Quote" forState:UIControlStateNormal];
-    quoteButton.frame = CGRectMake(370, 10, 100, 30);
-    [bToolBar addSubview:quoteButton];
-    [self.view addSubview:bToolBar];
-    
-    // Add Web View button and Add to Bottom Toolbar
-    webButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [webButton addTarget:self action:@selector(addWeb:) forControlEvents:UIControlEventTouchDown];
-    [webButton setTitle:@"Web" forState:UIControlStateNormal];
-    webButton.frame = CGRectMake(550, 10, 100, 30);
-    [bToolBar addSubview:webButton];
-    [self.view addSubview:bToolBar];
-    
-    // Add WatchList View button and Add to Bottom Toolbar
-    watchListButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [watchListButton addTarget:self action:@selector(addWatchList:) forControlEvents:UIControlEventTouchDown];
-    [watchListButton setTitle:@"Watch List" forState:UIControlStateNormal];
-    watchListButton.frame = CGRectMake(740, 10, 100, 30);
-    [bToolBar addSubview:watchListButton];
-    [self.view addSubview:bToolBar];
-    
-    // Add Video Player button and Add to Bottom Toolbar
-    videoButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [videoButton addTarget:self action:@selector(addVideo:) forControlEvents:UIControlEventTouchDown];
-    [videoButton setTitle:@"Video" forState:UIControlStateNormal];
-    videoButton.frame = CGRectMake(920, 10, 50, 30);
-    [bToolBar addSubview:videoButton];
-    [self.view addSubview:bToolBar];
-    
-    // Add Twitter button and Add to Bottom Toolbar
-    twitterButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [twitterButton addTarget:self action:@selector(addTwitter:) forControlEvents:UIControlEventTouchDown];
-    [twitterButton setTitle:@"Twitter" forState:UIControlStateNormal];
-    twitterButton.frame = CGRectMake(970, 10, 50, 30);
-    [bToolBar addSubview:twitterButton];
-    [self.view addSubview:bToolBar];
+////    // Add Chart View button and Add to Bottom Toolbar
+////    chartButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+////    [chartButton addTarget:self action:@selector(addChart:) forControlEvents:UIControlEventTouchDown];
+////    [chartButton setTitle:@"Chart" forState:UIControlStateNormal];
+////    chartButton.frame = CGRectMake(5, 10, 100, 30);
+////    [bToolBar addSubview:chartButton];
+////    [self.view addSubview:bToolBar];
+//    
+//    // Add News View Button and Add to Bottom Toolbar
+//    newsButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//    [newsButton addTarget:self action:@selector(addNews:) forControlEvents:UIControlEventTouchDown];
+//    [newsButton setTitle:@"News" forState:UIControlStateNormal];
+//    newsButton.frame = CGRectMake(180, 10, 100, 30);
+//    [bToolBar addSubview:newsButton];
+//    [self.view addSubview:bToolBar];
+//    
+//    // Add Quote View button and Add to Bottom Toolbar
+//    quoteButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//    [quoteButton addTarget:self action:@selector(addQuote:) forControlEvents:UIControlEventTouchDown];
+//    [quoteButton setTitle:@"Quote" forState:UIControlStateNormal];
+//    quoteButton.frame = CGRectMake(370, 10, 100, 30);
+//    [bToolBar addSubview:quoteButton];
+//    [self.view addSubview:bToolBar];
+//    
+//    // Add Web View button and Add to Bottom Toolbar
+//    webButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//    [webButton addTarget:self action:@selector(addWeb:) forControlEvents:UIControlEventTouchDown];
+//    [webButton setTitle:@"Web" forState:UIControlStateNormal];
+//    webButton.frame = CGRectMake(550, 10, 100, 30);
+//    [bToolBar addSubview:webButton];
+//    [self.view addSubview:bToolBar];
+//    
+//    // Add WatchList View button and Add to Bottom Toolbar
+//    watchListButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//    [watchListButton addTarget:self action:@selector(addWatchList:) forControlEvents:UIControlEventTouchDown];
+//    [watchListButton setTitle:@"Watch List" forState:UIControlStateNormal];
+//    watchListButton.frame = CGRectMake(740, 10, 100, 30);
+//    [bToolBar addSubview:watchListButton];
+//    [self.view addSubview:bToolBar];
+//    
+//    // Add Video Player button and Add to Bottom Toolbar
+//    videoButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//    [videoButton addTarget:self action:@selector(addVideo:) forControlEvents:UIControlEventTouchDown];
+//    [videoButton setTitle:@"Video" forState:UIControlStateNormal];
+//    videoButton.frame = CGRectMake(920, 10, 50, 30);
+//    [bToolBar addSubview:videoButton];
+//    [self.view addSubview:bToolBar];
+//    
+//    // Add Twitter button and Add to Bottom Toolbar
+//    twitterButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//    [twitterButton addTarget:self action:@selector(addTwitter:) forControlEvents:UIControlEventTouchDown];
+//    [twitterButton setTitle:@"Twitter" forState:UIControlStateNormal];
+//    twitterButton.frame = CGRectMake(970, 10, 50, 30);
+//    [bToolBar addSubview:twitterButton];
+//    [self.view addSubview:bToolBar];
     
 
-    
-    
-    
-    
-
-    
-        
-    
-    
-
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -214,6 +215,18 @@
     return YES;
 }
 
+- (void)addView:(id)sender
+{
+    int i = 0;
+    viewList = [[ViewListController alloc] init];
+    [viewListControllerArray insertObject:viewList atIndex:i];
+    
+    [self.view addSubview:viewList.view];
+    [self addChildViewController:[viewListControllerArray objectAtIndex:i]];
+    [[viewListControllerArray objectAtIndex:i] didMoveToParentViewController:self];
+    viewList.delegate = self;
+}
+
 - (void)addChart:(id)sender
 {
     int i = 0;
@@ -225,6 +238,7 @@
     [self.view addSubview:chartView.view];
     [self addChildViewController:[chartViewControllerArray objectAtIndex:i]];
     [[chartViewControllerArray objectAtIndex:i] didMoveToParentViewController:self];
+    
     
     
     
@@ -375,6 +389,11 @@
         [twitterSubView editTwitterView];
     }
     
+    for (ViewListController *viewListSubView in viewListControllerArray) {
+        [viewListSubView addGestureRecognizers];
+        [viewListSubView editViewList];
+    }
+    
     
     if ([editButton isTouchInside]) {
         
@@ -392,6 +411,7 @@
     [watchListButton setEnabled:NO];
     [videoButton setEnabled:NO];
     [twitterButton setEnabled:NO];
+    [addViewButton setEnabled:NO];
     
 }
 
@@ -432,6 +452,11 @@
         [twitterSubView removeGestureRecognizers];
         [twitterSubView activateTwitterView];
     }
+    
+    for (ViewListController *viewListSubView in viewListControllerArray) {
+        [viewListSubView removeGestureRecognizers];
+        [viewListSubView activateViewList];
+    }
 
 
         
@@ -452,6 +477,7 @@
     [watchListButton setEnabled:YES];
     [videoButton setEnabled:YES];
     [twitterButton setEnabled:YES];
+    [addViewButton setEnabled:YES];
     
     NSLog(@"Done Pressed");
     

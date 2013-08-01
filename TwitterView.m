@@ -16,14 +16,15 @@
     if (self) {
         // Initialization code
         // Top toolbar
-        UIToolbar *topBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 600, 40)];
+        UIToolbar *topBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 300, 40)];
         [topBar setTintColor:[UIColor blackColor]];
+        self.tableHeaderView = topBar;
         
-        // Bottom toolbar
-        //        UIToolbar *bottomBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 600, 300, 20)];
-        //        [bottomBar setTintColor:[UIColor blackColor]];
+         //Bottom toolbar
+                UIToolbar *bottomBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 600, 20)];
+                [bottomBar setTintColor:[UIColor blackColor]];
         
-        [self addSubview:topBar];
+        self.tableFooterView = bottomBar;
         //[self addSubview:bottomBar];
         [self setUserInteractionEnabled:YES];
         [self setMultipleTouchEnabled:YES];

@@ -11,6 +11,7 @@
 #import <Accounts/Accounts.h>
 #import <Social/Social.h>
 #import "TwitterView.h"
+#import "TwitterViewCell.h"
 
 @interface TwitterViewController : UITableViewController<UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
 {

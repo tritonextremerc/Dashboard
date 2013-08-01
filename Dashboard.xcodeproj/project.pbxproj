@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71026B5F17AAA3FC00A3B2ED /* TwitterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71026B5E17AAA3FC00A3B2ED /* TwitterViewCell.m */; };
+		71026B6217AAB2F300A3B2ED /* ViewListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71026B6117AAB2F200A3B2ED /* ViewListController.m */; };
+		71026B6517AAB3D900A3B2ED /* ViewList.m in Sources */ = {isa = PBXBuildFile; fileRef = 71026B6417AAB3D900A3B2ED /* ViewList.m */; };
+		71026B6B17AABE9B00A3B2ED /* Stock Chart.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71026B6617AABE9B00A3B2ED /* Stock Chart.jpg */; };
+		71026B6C17AABE9B00A3B2ED /* Stock Quote.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71026B6717AABE9B00A3B2ED /* Stock Quote.jpg */; };
+		71026B6D17AABE9B00A3B2ED /* Video.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71026B6817AABE9B00A3B2ED /* Video.jpg */; };
+		71026B6E17AABE9B00A3B2ED /* WatchList.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71026B6917AABE9B00A3B2ED /* WatchList.jpg */; };
+		71026B6F17AABE9B00A3B2ED /* Web.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71026B6A17AABE9B00A3B2ED /* Web.jpg */; };
 		7123985217A304EA0050E084 /* quote.html in Resources */ = {isa = PBXBuildFile; fileRef = 7123985117A304EA0050E084 /* quote.html */; };
 		7136DD381795B25900E2278A /* ListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7136DD371795B25900E2278A /* ListView.m */; };
 		71444AAF17A6BB0800312439 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71444AAE17A6BB0800312439 /* MediaPlayer.framework */; };
@@ -45,6 +53,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71026B5D17AAA3FC00A3B2ED /* TwitterViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterViewCell.h; sourceTree = "<group>"; };
+		71026B5E17AAA3FC00A3B2ED /* TwitterViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterViewCell.m; sourceTree = "<group>"; };
+		71026B6017AAB2F200A3B2ED /* ViewListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewListController.h; sourceTree = "<group>"; };
+		71026B6117AAB2F200A3B2ED /* ViewListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewListController.m; sourceTree = "<group>"; };
+		71026B6317AAB3D900A3B2ED /* ViewList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewList.h; sourceTree = "<group>"; };
+		71026B6417AAB3D900A3B2ED /* ViewList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewList.m; sourceTree = "<group>"; };
+		71026B6617AABE9B00A3B2ED /* Stock Chart.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Stock Chart.jpg"; sourceTree = SOURCE_ROOT; };
+		71026B6717AABE9B00A3B2ED /* Stock Quote.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Stock Quote.jpg"; sourceTree = SOURCE_ROOT; };
+		71026B6817AABE9B00A3B2ED /* Video.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Video.jpg; sourceTree = SOURCE_ROOT; };
+		71026B6917AABE9B00A3B2ED /* WatchList.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WatchList.jpg; sourceTree = SOURCE_ROOT; };
+		71026B6A17AABE9B00A3B2ED /* Web.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Web.jpg; sourceTree = SOURCE_ROOT; };
 		7123985117A304EA0050E084 /* quote.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = quote.html; sourceTree = "<group>"; };
 		7136DD361795B25900E2278A /* ListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListView.h; sourceTree = "<group>"; };
 		7136DD371795B25900E2278A /* ListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListView.m; sourceTree = "<group>"; };
@@ -202,6 +221,10 @@
 				71DAAF9A17903CB000A61A23 /* MainView.m */,
 				71DAAF9617903AC300A61A23 /* MainViewController.h */,
 				71DAAF9717903AC300A61A23 /* MainViewController.m */,
+				71026B6317AAB3D900A3B2ED /* ViewList.h */,
+				71026B6417AAB3D900A3B2ED /* ViewList.m */,
+				71026B6017AAB2F200A3B2ED /* ViewListController.h */,
+				71026B6117AAB2F200A3B2ED /* ViewListController.m */,
 				71EF9BC217970A9300398666 /* RayViewController.h */,
 				71EF9BC317970A9300398666 /* RayViewController.m */,
 				71C88ACD179976490028FEE6 /* QuoteView.h */,
@@ -224,6 +247,11 @@
 			isa = PBXGroup;
 			children = (
 				71EAE07817A981F60014B570 /* twitterLogo.jpg */,
+				71026B6617AABE9B00A3B2ED /* Stock Chart.jpg */,
+				71026B6717AABE9B00A3B2ED /* Stock Quote.jpg */,
+				71026B6817AABE9B00A3B2ED /* Video.jpg */,
+				71026B6917AABE9B00A3B2ED /* WatchList.jpg */,
+				71026B6A17AABE9B00A3B2ED /* Web.jpg */,
 				71EAE07A17A99FDD0014B570 /* RSSLogo.jpg */,
 				7123985117A304EA0050E084 /* quote.html */,
 				71C88AD5179996A80028FEE6 /* AAPL Chart.webarchive */,
@@ -246,6 +274,8 @@
 				71EAE06F17A9640F0014B570 /* TwitterView.m */,
 				71EAE07117A964950014B570 /* TwitterViewController.h */,
 				71EAE07217A964950014B570 /* TwitterViewController.m */,
+				71026B5D17AAA3FC00A3B2ED /* TwitterViewCell.h */,
+				71026B5E17AAA3FC00A3B2ED /* TwitterViewCell.m */,
 			);
 			name = "Twitter View";
 			path = ..;
@@ -311,6 +341,11 @@
 				7123985217A304EA0050E084 /* quote.html in Resources */,
 				71EAE07917A981F60014B570 /* twitterLogo.jpg in Resources */,
 				71EAE07B17A99FDD0014B570 /* RSSLogo.jpg in Resources */,
+				71026B6B17AABE9B00A3B2ED /* Stock Chart.jpg in Resources */,
+				71026B6C17AABE9B00A3B2ED /* Stock Quote.jpg in Resources */,
+				71026B6D17AABE9B00A3B2ED /* Video.jpg in Resources */,
+				71026B6E17AABE9B00A3B2ED /* WatchList.jpg in Resources */,
+				71026B6F17AABE9B00A3B2ED /* Web.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +376,9 @@
 				7184D08C179D6EBD0019D354 /* WatchListViewController.m in Sources */,
 				71EAE07017A9640F0014B570 /* TwitterView.m in Sources */,
 				71EAE07317A964950014B570 /* TwitterViewController.m in Sources */,
+				71026B5F17AAA3FC00A3B2ED /* TwitterViewCell.m in Sources */,
+				71026B6217AAB2F300A3B2ED /* ViewListController.m in Sources */,
+				71026B6517AAB3D900A3B2ED /* ViewList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

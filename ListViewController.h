@@ -19,7 +19,7 @@
     NSURLConnection *urlConnection;
     NSMutableData *xmlData;
     RSSChannel *channel;
-    ListView *listView;
+    //ListView *listView;
     //WebViewController *webViewController;
     UIPopoverController *popover;
     UILongPressGestureRecognizer *longPressRecognizer;

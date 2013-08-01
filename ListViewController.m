@@ -74,18 +74,19 @@
 - (void)editNewsView
 {
     
-    [listView setMultipleTouchEnabled:NO];
-    [listView setScrollEnabled:NO];
-    [listView setUserInteractionEnabled:NO];
-    //[watchListView setUserInteractionEnabled:NO];
+    [self.tableView setMultipleTouchEnabled:NO];
+    [self.tableView setScrollEnabled:NO];
+    [self.tableView setAllowsSelection:NO];
+
     
 }
 
 - (void)activateNewsView
 {
-    [listView setUserInteractionEnabled:YES];
-    [listView setMultipleTouchEnabled:YES];
-    [listView setScrollEnabled:YES];
+    [self.tableView setUserInteractionEnabled:YES];
+    [self.tableView setMultipleTouchEnabled:YES];
+    [self.tableView setScrollEnabled:YES];
+    [self.tableView setAllowsSelection:YES];
     
 }
 

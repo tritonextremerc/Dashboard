@@ -17,8 +17,9 @@
 //#import "WatchListViewController.h"
 #import "RayViewController.h"
 #import "TwitterViewController.h"
+#import "ViewListController.h"
 
-@interface MainViewController : UIViewController<UIGestureRecognizerDelegate, UITextFieldDelegate, UIWebViewDelegate>
+@interface MainViewController : UIViewController<UIGestureRecognizerDelegate, UITextFieldDelegate, UIWebViewDelegate, ChildViewControllerDelegate>
 {
     
     
@@ -36,8 +37,11 @@
     UIButton *watchListButton;
     UIButton *videoButton;
     UIButton *twitterButton;
+    UIButton *addViewButton;
     
 }
+
+
 
 @property (strong, nonatomic)RayViewController *chartView;
 @property (strong, nonatomic)RayViewController *quoteView;
@@ -46,6 +50,7 @@
 @property (strong, nonatomic)ListViewController *newsView;
 @property (strong, nonatomic)RayViewController *videoPlayer;
 @property (strong, nonatomic)TwitterViewController *twitterView;
+@property (strong, nonatomic)ViewListController *viewList;
 
 @property (strong, nonatomic)NSMutableArray *chartViewControllerArray;
 @property (strong, nonatomic)NSMutableArray *quoteViewControllerArray;
@@ -54,7 +59,9 @@
 @property (strong, nonatomic)NSMutableArray *newsViewControllerArray;
 @property (strong, nonatomic)NSMutableArray *videoPlayerControllerArray;
 @property (strong, nonatomic)NSMutableArray *twitterViewControllerArray;
+@property (strong, nonatomic)NSMutableArray *viewListControllerArray;
 
+- (void)addView:(id)sender;
 - (void)addChart:(id)sender;
 - (void)addNews:(id)sender;
 - (void)addQuote:(id)sender;
